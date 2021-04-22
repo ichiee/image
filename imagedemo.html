@@ -5,18 +5,31 @@
 </head>
 <body>
 
-<h1>Ichi Test</h1>
-<p>JPG example</p>
-<img src="img/sample_1280×853.jpg" alt="starts jpg" width="500" height="600">
+<h1>Ichi Test - Use the HTML5 <picture> element to deliver different image crops at different browser viewport sizes, a technique called art direction:</h1>
 
-<p>WebP example</p>
-<img src="img/sample1.webp" alt="by the beach webp" width="500" height="600">
+<p>JPG example</p> 
+  <picture>
+    <source srcset="img/sample_1280×853.jpg?width=600&crop=16:9" media="(min-width: 600px)"/>
+    <img src="img/sample_1280×853.jpg?width=320&crop=1:1"/>
+  </picture>
+
+
+<p>WebP example</p>  
+  <picture>
+    <source srcset="img/sample1.webp?width=600&crop=16:9" media="(min-width: 600px)"/>
+    <img src="img/sample1.webp?width=320&crop=1:1"/>
+  </picture>
+
 
 <p>PNG example </p>
-<img src="img/sample_1280×853.png" alt="stars png" width="500" height="600">
+  <picture>
+    <source srcset="img/sample_1280×853.png?width=600&crop=16:9" media="(min-width: 600px)"/>
+    <img src="img/sample_1280×853.png?width=320&crop=1:1"/>
+  </picture>
+
 
 <p>My first paragraph.</p>
-<img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">
+
 
 </body>
 </html>
